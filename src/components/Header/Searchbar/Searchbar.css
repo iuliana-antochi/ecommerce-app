@@ -1,0 +1,15 @@
+form {
+  padding-right: 1rem;
+}
+
+.custom-search-btn {
+  background-color: #FF5C40;
+  color: #fff;
+  border-color: #FF5C40;
+}
+
+.custom-search-btn:hover {
+  background-color: #ad3520;
+  border-color: #ad3520;
+  color: #fff;
+}
