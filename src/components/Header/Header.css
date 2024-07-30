@@ -1,0 +1,6 @@
+.scrollable-dropdown {
+  max-height: 400px;
+  overflow-y: auto;
+overflow-x: hidden;
+padding-right: 1rem;
+}
