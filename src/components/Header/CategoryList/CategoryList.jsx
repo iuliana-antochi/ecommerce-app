@@ -7,6 +7,9 @@ function CategoryList() {
     fetcher
   );
 
+  if (error) return <div>Failed to fetch categories.</div>;
+  if (isLoading) return <h2>Loading...</h2>;
+
   const kebabToCapitalized = (kebabStr) => {
     return kebabStr
       .split("-")
@@ -14,15 +17,10 @@ function CategoryList() {
       .join(" ");
   };
 
-  if (error) return <div>Failed to fetch categories.</div>;
-  if (isLoading) return <h2>Loading...</h2>;
-
   return (
     <ul className="list-unstyled">
       {data.map((category, index) => (
-        <li
-          key={index}
-          className="dropdown-item">
+        <li key={index} className="dropdown-item">
           {kebabToCapitalized(category)}
         </li>
       ))}

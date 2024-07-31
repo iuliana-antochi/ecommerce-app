@@ -1,4 +1,6 @@
+@import "../../../styles/colors.css";
+
 .basket-icon {
   font-size: 2rem;
-  color: #ff7e40;
+  color: var(--light-orange)
 }

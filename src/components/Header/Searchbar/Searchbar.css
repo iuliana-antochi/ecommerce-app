@@ -1,15 +1,17 @@
+@import "../../../styles/colors.css";
+
 form {
   padding-right: 1rem;
 }
 
-.custom-search-btn {
-  background-color: #FF5C40;
-  color: #fff;
-  border-color: #FF5C40;
+.custom-btn {
+  background-color: var(--mid-orange);
+  color: var(--white);
+  border-color: var(--mid-orange);
 }
 
-.custom-search-btn:hover {
-  background-color: #ad3520;
-  border-color: #ad3520;
-  color: #fff;
+.custom-btn:hover {
+  background-color: var(--dark-orange);
+  border-color: var(--dark-orange);
+  color: var(--white);
 }

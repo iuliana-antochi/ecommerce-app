@@ -9,11 +9,11 @@ function Searchbar() {
         placeholder="Search"
         aria-label="Search"
       />
-      <button className="btn custom-search-btn" type="submit">
+      <button className="btn custom-btn" type="submit">
         Search
       </button>
     </form>
   );
 }
 
-export default Searchbar
+export default Searchbar;
