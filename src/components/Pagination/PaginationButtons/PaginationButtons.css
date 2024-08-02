@@ -20,3 +20,14 @@
   color: var(--gray);
   cursor: not-allowed;
 }
+
+@media (max-width: 576px) {
+  .pagination-buttons {
+    flex-direction: column;
+  }
+
+  .pagination-buttons .btn {
+    margin-bottom: 10px;
+  }
+
+}
