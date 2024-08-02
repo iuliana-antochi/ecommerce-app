@@ -1,0 +1,22 @@
+@import "../../../styles/colors.css";
+
+.pagination-buttons button {
+  background-color: var(--mid-orange);
+  color: var(--white);
+  border: none;
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.pagination-buttons button:hover {
+  background-color: var(--dark-orange);
+  color: var(--white);
+}
+
+.pagination-buttons button:disabled {
+  background-color: var(--off-white);
+  color: var(--gray);
+  cursor: not-allowed;
+}

@@ -8,4 +8,5 @@ export default function shuffleArray(array) {
       array[currentIndex],
     ];
   }
+  console.log("shuffle array")
 }
