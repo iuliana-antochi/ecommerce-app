@@ -33,13 +33,7 @@ function Header() {
                 aria-expanded="false">
                 Categories
               </a>
-              <ul
-                className="dropdown-menu scrollable-dropdown"
-                aria-labelledby="navbarDropdown">
-                <li>
-                  <CategoryList />
-                </li>
-              </ul>
+              <CategoryList />
             </li>
           </ul>
           <div className="d-flex ms-auto align-items-center">

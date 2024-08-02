@@ -1,0 +1,17 @@
+@import "../../../styles/colors.css";
+
+.custom-category-link, .custom-dropdown-item {
+  text-decoration: none;
+  color: var(--mid-orange);
+}
+
+.custom-category-link:hover, .custom-dropdown-item:hover {
+  color: var(--dark-orange);
+  background-color: transparent;
+}
+
+
+.custom-category-link:focus, .custom-dropdown-item:focus {
+  color: var(--dark-orange);
+  background-color: transparent;
+}

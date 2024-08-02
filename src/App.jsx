@@ -6,7 +6,6 @@ import ProductCards from "./components/ProductCards/ProductCards";
 import useFetch from "./hooks/useFetch";
 import { useParams } from "react-router-dom";
 import PaginationButtons from "./components/Pagination/PaginationButtons/PaginationButtons";
-import shuffleArray from "./utils/shuffleArray";
 
 const itemsPerPage = 12;
 
@@ -33,8 +32,6 @@ function App() {
   if (error) return <div>Failed to fetch products.</div>;
 
   if (!data || !data.products) return <div>No products available.</div>;
-
-  shuffleArray(data.products);
 
   const totalPages = Math.ceil(data.total / itemsPerPage);
 

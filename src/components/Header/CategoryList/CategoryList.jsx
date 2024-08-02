@@ -1,4 +1,6 @@
 import useSWR from "swr";
+import { Link } from "react-router-dom";
+import './CategoryList.css'
 
 function CategoryList() {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -18,10 +20,14 @@ function CategoryList() {
   };
 
   return (
-    <ul className="list-unstyled">
+    <ul
+      className="dropdown-menu scrollable-dropdown"
+      aria-labelledby="navbarDropdown">
       {data.map((category, index) => (
-        <li key={index} className="dropdown-item">
-          {kebabToCapitalized(category)}
+        <li key={index} className="custom-dropdown-item dropdown-item">
+          <Link to={`/category/${category}`} className="custom-category-link">
+            {kebabToCapitalized(category)}
+          </Link>
         </li>
       ))}
     </ul>
