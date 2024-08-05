@@ -2,7 +2,7 @@ import "./ProductCard.css";
 
 function ProductCard({ products }) {
   if (!products || products.length === 0)
-    return <div>No products available.</div>;
+    return <div className="mb-4">No products available for this category.</div>;
 
   return (
     <div className="row">

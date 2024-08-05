@@ -10,7 +10,7 @@ function CategoryList() {
   );
 
   if (error) return <div>Failed to fetch categories.</div>;
-  if (isLoading) return <h2>Loading...</h2>;
+  if (isLoading) return <p>Loading...</p>;
 
   const kebabToCapitalized = (kebabStr) => {
     return kebabStr

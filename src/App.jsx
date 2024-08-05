@@ -28,10 +28,10 @@ function App() {
     `https://dummyjson.com/products?limit=${itemsPerPage}&skip=${skip}`
   );
 
-  if (isLoading) return <h2>Loading...</h2>;
+  if (isLoading) return <p>Loading...</p>;
   if (error) return <div>Failed to fetch products.</div>;
 
-  if (!data || !data.products) return <div>No products available.</div>;
+  if (!data || !data.products) return <div className="mb-4">No products available.</div>;
 
   const totalPages = Math.ceil(data.total / itemsPerPage);
 

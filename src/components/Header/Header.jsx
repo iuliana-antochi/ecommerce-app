@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Basket from "./Basket/Basket";
 import CategoryList from "./CategoryList/CategoryList";
 import "./Header.css";
@@ -8,9 +9,9 @@ function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link to="/page/1" className="navbar-brand">
           <Logo />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
