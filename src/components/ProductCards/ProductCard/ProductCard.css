@@ -1,10 +1,8 @@
 @import "../../../styles/colors.css";
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: end;
 }
 
 .card-img-top {
@@ -16,6 +14,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.card-title,
+.card-text {
+  padding: 0rem 1rem;
+}
+
+.card-text {
+  height: min-content;
 }
 
 .card-img-container {
@@ -30,15 +37,24 @@
   padding: 1rem;
 }
 
-.card-price-basket {
+.card-price-stock {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.custom-h3, .card-title {
+.custom-h4,
+.card-title {
   margin: 0;
   color: var(--mid-orange);
 }
 
+.custom-link {
+  color: var(--black);
+}
+
+.card-price-stock {
+  border-bottom: 1px solid var(--bs-card-border-color);
+  padding-bottom: 1rem;
+}

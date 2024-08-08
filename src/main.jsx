@@ -8,7 +8,8 @@ import {
   RouterProvider,
   Navigate,
 } from "react-router-dom";
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import ProductPage from "./pages/ProductPage/ProductPage";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
   {
     path: "/category/:categoryName",
     element: <CategoryPage />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/products/:productId",
+    element: <ProductPage />,
     errorElement: <NotFoundPage />,
   },
   { path: "*", element: <NotFoundPage /> },
