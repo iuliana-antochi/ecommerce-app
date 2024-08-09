@@ -4,8 +4,31 @@ import CategoryList from "./CategoryList/CategoryList";
 import "./Header.css";
 import Logo from "./Logo/Logo";
 import Searchbar from "./Searchbar/Searchbar";
+import { useState } from "react";
+import useFetch from "../../hooks/useFetch";
 
 function Header() {
+  const [results, setResults] = useState([]);
+  const { data, isLoading, error } = useFetch(
+    "https://dummyjson.com/products?limit=0"
+  );
+
+  console.log(data);
+
+  const handleSearch = (query) => {
+    if (query && data && data.products) {
+      const filteredResults = data.products.filter((item) =>
+        item.title.toLowerCase().includes(query.toLowerCase())
+      );
+      setResults(filteredResults);
+    } else {
+      setResults([]);
+    }
+  };
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error fetching data</p>;
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -38,7 +61,7 @@ function Header() {
             </li>
           </ul>
           <div className="d-flex ms-auto align-items-center">
-            <Searchbar />
+            <Searchbar onSearch={handleSearch} results={results} />
             <Basket />
           </div>
         </div>

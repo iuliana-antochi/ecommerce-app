@@ -21,11 +21,11 @@ function CategoryList() {
 
   return (
     <ul
-      className="dropdown-menu scrollable-dropdown"
+      className="dropdown-menu"
       aria-labelledby="navbarDropdown">
       {data.map((category, index) => (
         <li key={index} className="custom-dropdown-item dropdown-item">
-          <Link to={`/category/${category}`} className="custom-category-link">
+          <Link to={`/category/${category}`} className="custom-navbar-link">
             {kebabToCapitalized(category)}
           </Link>
         </li>

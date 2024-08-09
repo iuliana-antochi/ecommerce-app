@@ -15,3 +15,21 @@ form {
   border-color: var(--dark-orange);
   color: var(--white);
 }
+
+.dropdown-menu {
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}

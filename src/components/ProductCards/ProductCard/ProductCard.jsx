@@ -16,7 +16,7 @@ function ProductCard({ products }) {
               className="text-decoration-none custom-link">
               <div className="card-img-container">
                 <img
-                  src={product.images[0] || product.images[1]}
+                  src={product.images[0]}
                   className="card-img"
                   alt={product.title}
                 />
@@ -37,7 +37,9 @@ function ProductCard({ products }) {
                 Add to basket
               </a>
             ) : (
-              <button className="btn btn-secondary mb-3">Out of stock</button>
+              <button className="btn btn-secondary disabled mb-3">
+                Out of stock
+              </button>
             )}
           </div>
         </div>
